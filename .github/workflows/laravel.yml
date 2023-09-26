@@ -25,8 +25,8 @@ jobs:
           composer-${{ runner.os }}-
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
-        php-version: '8.0'
-    - uses: actions/checkout@v2
+        php-version: '8.1'
+    - uses: actions/checkout@v3
     
     - name: Copy .env
       run: cp .env.example .env
