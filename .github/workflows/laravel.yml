@@ -31,6 +31,9 @@ jobs:
     - name: Copy .env
       run: cp .env.example .env
 
+    - name: Clear Composer Cache
+      run: composer clear-cache
+
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     
