@@ -48,6 +48,12 @@ After making changes to the configuration files, it's a good practice to clear t
 php artisan config:clear
 ```
 
+## Create Database
+Create a new database using phpMyAdmin or MySQL Workbench named "gilde_search", then run this command in the terminal:
+```
+php artisan migrate
+```
+
 ## Run Tests
 To test the your project, simply run the following command in your terminal:
 
