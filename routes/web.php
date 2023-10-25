@@ -17,11 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/search', function () {
+Route::get('/', function () {
     return view('search');
 })->name('search');
+
 Route::get('/test', function () {
     return 'Test route is working!';
 });
+
+Route::get('/results', function () {
+    return view('results');
+})->name('search.results');
 
 
