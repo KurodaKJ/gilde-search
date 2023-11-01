@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('search');
+})->name('search');
+
+Route::get('/test', function () {
+    return 'Test route is working!';
 });
+
+Route::get('/results', function () {
+    return view('results');
+})->name('search.results');
+
+
