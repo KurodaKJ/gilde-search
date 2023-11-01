@@ -9,7 +9,9 @@
             <ul class="list-group">
                 @forelse($results as $result)
                 <li class="list-group-item">
-                    <h5>{{ $result['title'] }}</h5>
+                    <h5>
+                        <a href="{{ $result['url'] }}" target="_blank">{{ $result['title'] }}</a>
+                    </h5>
                     <p>{{ $result['description'] }}</p>
                 </li>
                 @empty
