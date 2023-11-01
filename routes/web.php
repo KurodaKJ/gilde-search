@@ -27,7 +27,7 @@ Route::get('/test', function () {
 
 Route::get('/results', 'App\Http\Controllers\SearchController@search')->name('search.results');
 
-Route::get('/crawl', 'WebCrawlerController@crawl');
+Route::get('/crawl', 'App\Http\Controllers\WebCrawlerController@crawl');
 
-Route::get('/crawl/{url}', 'WebCrawlerController@crawl');
+Route::get('/crawl/{url}', 'App\Http\Controllers\WebCrawlerController@crawl');
 

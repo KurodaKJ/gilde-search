@@ -16,6 +16,7 @@ class SearchController extends Controller
         $results = Sites::query()
             ->where('title', 'LIKE', "%{$query}%")
             ->orWhere('description', 'LIKE', "%{$query}%")
+            ->orWhere('keywords', 'LIKE', "%{$query}%")
             ->get();
 
         // Modify the results to include the URL.
