@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sites;
 use Illuminate\Http\Request;
 use Goutte\Client;
 
@@ -18,12 +19,9 @@ class WebCrawlerController extends Controller
         $description = $crawler->filter('meta[name="description"]')->attr('content');
         $keywords = $crawler->filter('meta[name="keywords"]')->attr('content');
 
-        // Save the data to the database or perform other actions
-        // ...
-
-        // Return a response or view
-        return view('crawler.result', [
+        Sites::create([
             'title' => $title,
+            'url' => $url,
             'description' => $description,
             'keywords' => $keywords,
         ]);

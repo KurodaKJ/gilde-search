@@ -29,4 +29,7 @@ Route::get('/results', function () {
     return view('results');
 })->name('search.results');
 
+Route::get('/crawl', 'WebCrawlerController@crawl');
+
+Route::get('/crawl/{url}', 'WebCrawlerController@crawl');
 
