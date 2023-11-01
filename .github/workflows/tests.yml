@@ -43,5 +43,8 @@ jobs:
       - name: Generate app key
         run: php artisan key:generate
 
+      - name: Copy Mix manifest file
+        run: cp mix-manifest.json public/mix-manifest.json
+
       - name: Execute tests
         run: vendor/bin/phpunit
