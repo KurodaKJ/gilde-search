@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('search');
+})->name('search');
+
+Route::get('/test', function () {
+    return 'Test route is working!';
 });
+
+Route::get('/results', 'App\Http\Controllers\SearchController@search')->name('search.results');
+
+Route::get('/crawl', 'App\Http\Controllers\WebCrawlerController@crawl');
+
+Route::get('/crawl/{url}', 'App\Http\Controllers\WebCrawlerController@crawl');
+
